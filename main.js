@@ -1,3 +1,4 @@
+"use strict";
 // Напишите if..else, соответствующий следующему switch:=========================================================
 
 // switch (browser) {
@@ -175,4 +176,87 @@
 //     alert( pow(x, n) );
 //   }
 
+
+
+// Замените код Function Expression стрелочной функцией:
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   function() { alert("Вы согласились."); },
+//   function() { alert("Вы отменили выполнение."); }
+// );
+
+// Мое решение
+
+// let question = confirm('Вы согласны?');
+// let ask = (question = true)?
+// () => alert('Вы согласились'):
+// () => alert('Вы отменили выполнение');
+// ask
+
+// Правильное решенеие
+
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
+  
+//   ask(
+//     "Вы согласны?",
+//     () => alert("Вы согласились."),
+//     () => alert("Вы отменили выполнение.")
+//   );
+
+// Лучшее решение из коментариев по моему мнению
+
+// let ask = confirm ("Вы согласны?")?
+// () => alert('Вы согласились.') :
+// () => alert('Вы отменили выполнение');
+// ask ();
+
+
+
+// Напишите код, выполнив задание из каждого пункта отдельной строкой:
+
+// 1.Создайте пустой объект user.
+// 2.Добавьте свойство name со значением John.
+// 3.Добавьте свойство surname со значением Smith.
+// 4.Измените значение свойства name на Pete.
+// 5.Удалите свойство name из объекта.
+
+// Решение
+
+// let user = {};
+// user.name= John;
+// user.surname= Smith;
+// user.name = Pete;
+// delete user.name;
+
+
+
+// Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+// Должно работать так:
+
+// let schedule = {};
+// alert( isEmpty(schedule) ); // true
+// schedule["8:30"] = "get up";
+// alert( isEmpty(schedule) ); // false
+
+// Решение
+
+
+function isEmpty(obj) {
+    for (let key in obj){
+        return false;
+    }
+    return true;
+}
+isEmpty(obj);
+schedule["8:30"] = "get up";
+isEmpty(obj);
 
