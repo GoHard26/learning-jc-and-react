@@ -434,9 +434,9 @@ let regionNumber
 do{
     regionNumber = prompt('Введите номер региона', '')
 if (codes[regionNumber] == undefined){
-    alert('Вы отменили ввод')
-}else if (codes[regionNumber] == undefined){
-    alert('Такого региона нет') 
+    alert('Такого региона нет')
+}else if (regionNumber == undefined){
+    alert(' Вы отменили ввод') 
 }
 else{
     alert(codes[regionNumber])
