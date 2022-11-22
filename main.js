@@ -337,26 +337,6 @@
 
 // Создать всплывающее окно которое будет спрашивать номер региона , а после ввода будет показывать к какому региону принадлежит номер
 
-let regionNumber 
-
-do {
-    regionNumber = prompt('Введите номер региона', '')
-}while(regionNumber != undefined)
-
-
-if (regionNumber == undefined){
-    alert('Вы отменили ввод')
-}else if (codes[regionNumber] == undefined){
-    alert('Такого региона нет')
-}
-else{
-    alert(codes[regionNumber])
-}
- 
-
-
-
-
 let codes = {
     
     "01" : "Республика Адыгея (Адыгея)","101" : "Республика Адыгея (Адыгея)",
@@ -450,6 +430,19 @@ let codes = {
     "94" : "Территории, находящиеся за пределами РФ и обслуживаемые Управлением режимных объектов МВД России, Байконур",
     "92" : "Севастополь",
 }
+let regionNumber
+do{
+    regionNumber = prompt('Введите номер региона', '')
+if (regionNumber == undefined){
+    alert('Вы отменили ввод')
+}else if (codes[regionNumber] == undefined){
+    alert('Такого региона нет') 
+}
+else{
+    alert(codes[regionNumber])
+}
+}while(regionNumber != undefined)
+
 
    
 
