@@ -433,7 +433,7 @@ let codes = {
 let regionNumber
 do{
     regionNumber = prompt('Введите номер региона', '')
-if (regionNumber == undefined){
+if (codes[regionNumber] == undefined){
     alert('Вы отменили ввод')
 }else if (codes[regionNumber] == undefined){
     alert('Такого региона нет') 
